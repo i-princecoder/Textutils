@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 576px) {
+  .btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .btn-custom {
+    width: 60%;
+    display: block;
+    padding: 6px 10px;
+    margin: 5px auto;
+
+    align-items: center;
+  }
+}
