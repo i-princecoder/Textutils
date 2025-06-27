@@ -3,7 +3,7 @@
 **TextUtils** is a simple and responsive React web app for quick text formatting and analysis. Convert text to uppercase, lowercase, capitalized case, copy it to clipboard, clear it, and more — all in one place.
 
 ![TextUtils Screenshot](./public/Textutils_look.png)
-
+ 
 ---
 
 ## 🚀 Features
