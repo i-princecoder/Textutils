@@ -25,6 +25,7 @@ export default function TextForm(props) {
     let text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    document.getSelection().removeAllRanges();
     props.showAlert("Copied", "success");
   };
 
@@ -62,7 +63,7 @@ export default function TextForm(props) {
               : "black",
         }}
       >
-        <h1>{props.heading}</h1>
+        <h1 className="mb-4">{props.heading}</h1>
         <div className="mb-3">
           <textarea
             className="form-control"
@@ -86,30 +87,35 @@ export default function TextForm(props) {
         </div>
         <div className="btn-wrapper">
           <button
+            disabled={text.length === 0}
             className={`btn btn-${btnColor()} btn-custom mx-3`}
             onClick={handleUpClick}
           >
             Convert To Uppercase
           </button>
           <button
+            disabled={text.length === 0}
             className={`btn btn-${btnColor()}  btn-custom mx-2`}
             onClick={handleLowClick}
           >
             Convert ToLowercase
           </button>
           <button
+            disabled={text.length === 0}
             className={`btn btn-${btnColor()} btn-custom mx-2`}
             onClick={handleCapClick}
           >
             Convert To Capitalized Case
           </button>
           <button
+            disabled={text.length === 0}
             className={`btn btn-${btnColor()} btn-custom mx-2`}
             onClick={handleClearClick}
           >
             Clear Text
           </button>
           <button
+            disabled={text.length === 0}
             className={`btn btn-${btnColor()} btn-custom mx-2`}
             onClick={handleCopy}
           >
